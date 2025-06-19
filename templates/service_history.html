@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>View Service History</h2>
+<form method="post">
+    Serial Number: <input name="serial"><br>
+    <button type="submit">Get History</button>
+</form>
+
+{% for event in events %}
+    <hr>
+    <p><strong>Date:</strong> {{ event.date }}</p>
+    <p><strong>Description:</strong> {{ event.description }}</p>
+    <p><strong>Service Center:</strong> {{ event.center }}</p>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Transfer Ownership</h2>
+<form method="post">
+    Serial Number: <input name="serial"><br>
+    New Owner Address: <input name="new_owner"><br>
+    <button type="submit">Transfer</button>
+</form>
+{% endblock %}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Asset Provenance System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('register') }}">Register Device</a></li>
+            <li><a href="{{ url_for('transfer') }}">Transfer Ownership</a></li>
+            <li><a href="{{ url_for('service') }}">Add Service Event</a></li>
+            <li><a href="{{ url_for('device') }}">View Device</a></li>
+            <li><a href="{{ url_for('service_history') }}">View Service History</a></li>
+        </ul>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

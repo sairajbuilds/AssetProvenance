@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Register Device</h2>
+<form method="post">
+    Serial Number: <input name="serial"><br>
+    Model: <input name="model"><br>
+    Warranty (in years): <input name="warranty"><br>
+    <button type="submit">Register</button>
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</form>
+{% endblock %}

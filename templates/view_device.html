@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>View Device</h2>
+<form method="post">
+    Serial Number: <input name="serial"><br>
+    <button type="submit">View</button>
+</form>
+
+{% if device %}
+    <p><strong>Model:</strong> {{ device.model }}</p>
+    <p><strong>Owner:</strong> {{ device.owner }}</p>
+    <p><strong>Warranty Expiry (Unix):</strong> {{ device.expiry }}</p>
+    <p><strong>Service Count:</strong> {{ device.service_count }}</p>
+{% endif %}
+{% endblock %}
